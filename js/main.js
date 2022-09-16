@@ -17,9 +17,9 @@ const links = [
     }
 ]
 
-displaList(links);
+displayList(links);
 
-function displaList(data) {
+function displayList(data) {
     data.forEach(element => {
         let li = document.createElement('li');
         li.innerHTML = `<a href="${element.url}" target="_blank">${element.label}</a>`;
