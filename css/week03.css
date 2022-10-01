@@ -1,0 +1,108 @@
+body {
+    height: 100%;    
+}
+
+h1, h3 { 
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+p, button {
+    font-family: 'Nunito', 'sans-serif';
+}
+
+h1 {
+    font-size: 22px;
+    text-align: center;
+    margin: 10px 5px;
+    border: 5px solid rgb(238, 96, 1);
+    padding: 5px;
+    background-color: rgb(32, 218, 193);
+}
+
+#button-div {
+    display: grid;
+    grid-template-rows: .5fr .5fr 280px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    height: 100%;
+}
+
+h3 {
+    height: fit-content;
+    grid-column: 1/4;
+    text-align: center;
+    background-color: darkred;
+    padding: 15px;
+    margin: 5px 10px;
+    color: rgb(208, 255, 0);
+    text-shadow: 0 0 10px;
+}
+
+button {
+    grid-row: 4;
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+    padding: 10px 15px;
+    font-weight: bold ;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+button:nth-child(4):hover {
+    background-color: rgb(255, 238, 7);
+    color: rgb(17, 0, 255);
+    border: 5px solid rgb(224, 0, 0);
+}
+
+button:nth-child(5):hover {
+    background-color: blue;
+    color: white;
+    border: 5px solid red;
+}
+
+button:nth-child(6):hover {
+    background-color: white;
+    color: red;
+    border: 5px solid blue;
+}
+
+p {
+    justify-self: center;
+    grid-column: 1/4;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(11, 35, 255);
+    text-shadow: 0 0 10px rgb(0, 255, 242);
+    margin: 5px 0;
+}
+
+img {
+    width: 250px;
+    grid-row: 3;
+    grid-column: 1/4;
+    justify-self: center;
+    box-shadow: 0 0 10px blue;
+    align-self: center;
+}
+
+/* -------- CSS MEDIUM ---------- */
+@media (min-width: 45em) {
+    h1, h3, button {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 40px;
+    }
+    
+    img {
+        width: 280px;
+        margin-bottom: 10px;
+    }
+}
