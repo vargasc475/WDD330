@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Things List</title>
+    <link rel="stylesheet" href="css/week04.css">
+    <script src="js/week04.js" defer></script>
+</head>
+<body>
+    <h1>Welcome to Favorite List Maker</h1>
+    <form id="favorite">
+        <label for="firstName">First Name:
+            <input type="text" id="firstN" name="firstN" autofocus placeholder="First Name" maxlength="10" required>
+        </label>
+        <label for="lastN">Last Name:
+            <input type="text" name="lastN" id="lastN" placeholder="Last Name" maxlength="10" required>
+        </label>
+
+        <h3>Answer the questions above</h3>
+        <label for="favoriteColor">What is your favorite color?
+            <input type="text" name="favoriteColor" id="favoriteColor" required>
+        </label>
+        <label for="favoriteFood">What is your faovrite food?
+            <input type="text" name="favoriteFood" id="favoriteFood" required>
+        </label>
+        <label for="favoriteSport">What is your favorite sport?
+            <input type="text" name="favoriteSport" id="favoriteSport" required>
+        </label>
+        <label for="favoriteMovie">What is your favorite movie?
+            <input type="text" name="favoriteMovie" id="favoriteMovie" required>
+        </label>
+        
+        <h3>Select your favorite fruit</h3>
+        <label for="banana">Banana
+            <input type="radio" name="fruit" value="Banana" id="radio">
+        </label>
+        <label for="orange">Orange
+            <input type="radio" name="fruit" value="Orange" id="radio">
+        </label>
+        <label for="coco">Coco
+            <input type="radio" name="fruit" value="Coco" id="radio">
+        </label>
+        <label for="mango">Mango
+            <input type="radio" name="fruit" value="Mango" id="radio">
+        </label>
+        <label for="durazno">Peach
+            <input type="radio" name="fruit" value="Peach" id="radio">
+        </label>
+        <label for="none">None of the list
+            <input type="radio" name="fruit" id="radio" value="None of the list">
+        </label>
+
+        <label for="country">Choose the continent you want to visit:
+            <select name="country" id="country">
+                <option value="" selected>Choose a Continent</option>
+                <option value="Africa">Africa</option>
+                <option value="America">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+                <option value="Antarctic">Antarctic</option>
+            </select>
+        </label>
+
+        <label for="childsDream">Tell about your child's dream
+            <textarea name="childsDream" id="childsDream" cols="30" rows="10"></textarea>
+        </label>
+
+        <button type="submit" id="submit" >Create List</button>
+    </form>
+    <div id="displayList">
+        <h2 id="userName">Your list will be displayed here.</h2>
+    </div>
+</body>
+</html>
