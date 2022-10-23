@@ -1,0 +1,180 @@
+/* STYLE BODY */
+
+html, body, main {
+    height: 100%;
+}
+
+body {
+    /* height: 547px; */
+    background-color:rgb(127, 214, 210);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 60px 1fr 60px;
+    background-color:rgb(127, 214, 210);
+}
+
+/* STYLE INPUT USER */
+
+div#input-form {
+    display: grid;
+    grid-template-columns: 2fr .5fr;
+}
+
+div#input-form label input {
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+}
+
+div#input-form label {
+    justify-self: center;
+    width: 87%;
+}
+
+div#input-form button {
+    width: fit-content;
+    padding: 0 15px;
+    height: 45px;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    color: rgb(96, 153, 10);
+    background-color: rgb(187, 187, 187);
+}
+
+h1 {
+    text-align: center;
+    align-self: center;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+
+/* STYLE TODO LIST */
+
+#list-container ul li.hide {
+    display: none;
+}
+
+#list-container ul li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: .5fr 2fr 1fr;
+    column-gap: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    background-color: rgb(193, 247, 244);
+}
+
+#list-container ul {
+    padding: 0;
+}
+
+#list-container ul li input {
+    width: 50%;
+    justify-self: center;
+    height: 50px;
+    margin: 0;
+}
+
+#list-container ul li button {
+    background-color: rgb(193, 247, 244);
+    border: none;
+    height: 50px;
+    border-radius: 0 10px 10px 0;
+    font-size: 18px;
+}
+
+#list-container ul li p {
+    font-size: 20px;
+    height: 45px;
+    align-self: center;
+    margin: 10px 0 0 0;
+}
+
+/* checked todo as completed or incomplete */
+div#list-container ul li p.completed {
+    text-decoration: line-through;
+}
+
+div#list-container ul li p.incomplete {
+    text-decoration: none;
+}
+
+/* styling buttons */
+
+div#display-buttons {
+    width: 70%;
+    margin: 0;
+    height: 40px;
+    background-color: rgb(252, 175, 112);
+    border-radius: 10px;
+    padding: 0 30px 0 60px;
+}
+
+div#display-buttons button {
+    height: 70%;
+    margin: 5px 5px;
+    background-color: rgb(247, 129, 33);
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* MEDIUM CSS */
+
+@media (min-width: 45em) {
+    div#list-container ul li input {
+        width: 25%;
+    }
+
+    div#list-container ul li {
+        width: 90%;
+        margin: 10px 0 10px 30px;
+    }
+
+
+    div#list-container ul li button {
+        width: fit-content;
+        justify-self: center;
+    }
+
+    div#display-buttons {
+        width: fit-content;
+        padding: 0;
+        margin-left: 50px;
+    }
+}
+
+/* STYLE LARGE CSS */
+
+@media (min-width: 60em) {
+    main {
+        grid-template-rows: 60px 60px 1fr;
+    }
+
+    div#input-form {
+        grid-row: 2/3;
+        align-self: center;
+    }
+
+    div#input-form label {
+        justify-self: end;
+    }
+
+    div#input-form button {
+        margin-left: 15px;
+    }
+
+    div#list-container {
+        grid-row: 3/4;
+    }
+
+}

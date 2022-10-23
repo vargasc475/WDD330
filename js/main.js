@@ -18,7 +18,12 @@ const links = [
     {
         label: "week 4 Exercise",
         url: "week04.html"
+    },
+    {
+        label: "week 6 ToDos",
+        url: "/To-Do List/index.html"
     }
+
 ]
 
 displayList(links);
