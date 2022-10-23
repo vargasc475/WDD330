@@ -21,7 +21,7 @@ const links = [
     },
     {
         label: "week 6 ToDos",
-        url: "/To-Do List/index.html"
+        url: "todo.html"
     }
 
 ]
