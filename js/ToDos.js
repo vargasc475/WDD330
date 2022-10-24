@@ -55,7 +55,6 @@ export default class ToDos {
                         content.classList.remove('incomplete');
                         li.classList.add('completed');
                         li.classList.remove('active');
-                        this.displayActiveItems()
 
                         window.localStorage.setItem('todos', JSON.stringify(objectList));
                     
@@ -133,7 +132,6 @@ export default class ToDos {
                     
         })
 
-        this.displayActiveItems();
             
     }
 
@@ -143,38 +141,4 @@ export default class ToDos {
         input.focus();
         input.value = '';
     }
-
-    displayActiveItems() {
-        const todoList = window.localStorage.getItem('todos');
-        const list = JSON.parse(todoList);
-        const activeButton = document.getElementById('active');
-        const activeList = document.querySelector('.show');
-        // const activeLists = document.querySelector('.show');
-
-        activeButton.addEventListener('click', function() {
-
-            
-            document.querySelector('.completed').style.display = 'none';
-            
-
-
-            // document.querySelector('.show').style.display = 'none';
-            // document.querySelector('.show').style.display = 'none';
-
-            // console.log(list[1].completed)
-            // list.forEach(element => {
-            //     // console.log(i);
-            //     if (element.completed === true) {
-            //         activeList.classList.add('hide');
-            //         activeList.classList.remove('show');
-            //     } else {
-            //         activeList.classList.add('show');
-            //         activeList.classList.remove('hide');
-            //     }
-            // })
-            
-        })
-    }
-
-    displayCompletedItems() {}
 }

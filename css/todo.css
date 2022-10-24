@@ -57,9 +57,9 @@ h1 {
 
 /* STYLE TODO LIST */
 
-#list-container ul li.hide {
+/* #list-container ul li.hide {
     display: none;
-}
+} */
 
 #list-container ul li {
     list-style: none;
@@ -69,12 +69,13 @@ h1 {
     margin: 10px 0;
     border: none;
     border-radius: 10px;
-    height: 50px;
+    height: fit-content;
     background-color: rgb(193, 247, 244);
 }
 
 #list-container ul {
     padding: 0;
+    margin: 5px;
 }
 
 #list-container ul li input {
@@ -82,6 +83,7 @@ h1 {
     justify-self: center;
     height: 50px;
     margin: 0;
+    align-self: center;
 }
 
 #list-container ul li button {
@@ -90,13 +92,14 @@ h1 {
     height: 50px;
     border-radius: 0 10px 10px 0;
     font-size: 18px;
+    align-self: center;
 }
 
 #list-container ul li p {
     font-size: 20px;
-    height: 45px;
+    height: fit-content;
     align-self: center;
-    margin: 10px 0 0 0;
+    margin: 5px 0;
 }
 
 /* checked todo as completed or incomplete */
@@ -112,7 +115,7 @@ div#list-container ul li p.incomplete {
 
 div#display-buttons {
     width: 70%;
-    margin: 0;
+    margin: 0 0 10px 0;
     height: 40px;
     background-color: rgb(252, 175, 112);
     border-radius: 10px;

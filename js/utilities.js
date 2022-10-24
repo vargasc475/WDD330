@@ -4,10 +4,7 @@ import LocalStorage from "./ls.js";
 const input = document.getElementById('input');
 const button = document.getElementById('button');
 const list = document.getElementById('list');
-// let listContent = [];
-// let ids = [];
-// let completed = [];
-// const todos = {};
+
 const toDoList = [];
 
 
@@ -16,11 +13,8 @@ const toDoList = [];
 const todoInstance = new ToDos();
 const lsInstance = new LocalStorage();
 
-// lsInstance.assignValues();
+
 todoInstance.displayLocalStorage(list);
-// todoInstance.displayActiveItems();
-// lsInstance.changeCompleted();
-lsInstance.deleteList(toDoList);
 
 button.addEventListener('click', function() {
     const date = new Date();
@@ -49,8 +43,5 @@ button.addEventListener('click', function() {
         todoInstance.displayInputUser(list, checkbox, deleteButton, li, content, toDoList);
        
         todoInstance.cleanInput(input);
-        // todoInstance.displayActiveItems();
-        
-
     }
 })
