@@ -22,7 +22,12 @@ const links = [
     {
         label: "week 6 ToDos",
         url: "todo.html"
+    },
+    {
+        label: "week 7 Ajax",
+        url: "ajax.html"
     }
+
 
 ]
 
