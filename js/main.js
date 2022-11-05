@@ -28,7 +28,7 @@ const links = [
         url: "ajax.html"
     },
     {
-        label: "week 8 Transitions and Animations",
+        label: "week 8 Animations",
         url: "week08.html"
     }
 
