@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+    color: #ffff;
+    font-size: 18px;
+    animation-name: backgroundBody;
+    animation-duration: 5s;
+    display: grid;
+    grid-template-rows: 1fr .5fr 1fr;
+    font-family: "Bebas Neue";
+}
+
+h2, h1 {
+    text-align: center;
+}
+
+h2 {
+    align-self: end;
+}
+
+h1 {
+    color: orange;
+    text-shadow: 0 0 10px orange;
+    animation-name: appearDisappear, bgMove;
+    animation-duration: 5s;
+    align-self: center;
+}
+
+button {
+    background-color: black;
+    color: aqua;
+    text-shadow: 0 0 15px aqua;
+    border: 1px solid aqua;
+    width: fit-content;
+    justify-self: center;
+    animation-name: myAnimation;
+    animation-duration: 5s;
+    align-self: start;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button a {
+    text-decoration: none;
+    color: aqua;
+    font-family: Arial;
+}
+
+button a:hover {
+    text-shadow: 0 0 30px orange;
+    color: orange;
+}
+
+button:hover {
+    text-shadow: 0 0 30px orange;
+    color: orange;
+}
+
+/* ANIMTION FOR H1 */
+
+@keyframes myAnimation {
+    0%, 70% {
+        opacity: 0;
+    }
+    95%, 100% {
+        opacity: 1;
+    }
+
+    98%, 100% {
+        text-shadow: 0 0 15px aqua;
+    }
+}
+
+@keyframes appearDisappear {
+    0%, 40% {
+        color: white;
+        text-shadow: none;
+    }
+
+    40%, 50% {
+        color: black;
+        text-shadow: none;
+    }
+
+    50%, 70% {
+        color: white;
+        text-shadow: none;
+    }
+
+    70%, 100% {
+        color: orange;
+    }
+
+    90%, 100% {
+        text-shadow: 0 0 15px orange;
+    }
+}
+
+@keyframes bgMove {
+    100% {
+        background-position: 120% 0;
+    }
+}
+
+/* ANIMATION FOR BODY */
+
+@keyframes backgroundBody {
+    0%, 40% {
+        background-color: white;
+    }
+    40%, 100% {
+        background-color: black;
+    }
+}
+
+/* STYLING MEDIUM VIEW */
+@media (min-width: 45em) {
+    body {
+        font-size: 28px;
+    }
+
+/* STYLING LARGE VIEW */
+@media (min-width: 60em) {
+    body {
+        font-size: 38px;
+    }
+}
+}
