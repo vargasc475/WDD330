@@ -34,6 +34,10 @@ const links = [
     {
         label: "week 9 Multimedia",
         url: "week09.html"
+    },
+    {
+        label: "week 10 Validating with the API",
+        url: "week10.html"
     }
 
 ]
