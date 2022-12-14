@@ -1,0 +1,23 @@
+@media(min-width: 64em) {
+    #portfolio ul {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+
+    #portfolio ul li img {
+        transition: width .3s, height .3s;
+    }
+
+    #portfolio ul li img:hover {
+        width: 210px;
+        height: 116px;
+    }
+
+    #portfolio ul li:hover {
+        position: relative;
+    }
+
+}

@@ -1,0 +1,16 @@
+@media(min-width: 45em) {
+    #title {
+        height: 40%;
+    }
+
+    #portfolio ul {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+        margin-top: 130px;
+    }
+
+    footer {
+        font-size: 16px;
+    }
+}

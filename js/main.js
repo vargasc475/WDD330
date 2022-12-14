@@ -36,8 +36,12 @@ const links = [
         url: "week09.html"
     },
     {
-        label: "week 10 Validating with the API",
+        label: "week 10 Validating",
         url: "week10.html"
+    },
+    {
+        label: "Pokemon Zone app",
+        url: "pokemonZone/index.html"
     }
 
 ]
@@ -47,7 +51,14 @@ displayList(links);
 function displayList(data) {
     data.forEach(element => {
         let li = document.createElement('li');
-        li.innerHTML = `<a href="${element.url}" target="_blank">${element.label}</a>`;
+        li.innerHTML = `<a id='background-pic' href="${element.url}" target="_blank">
+                            <div id='image-space'>
+                                <img src='images/desarrollo-web.png' alt='laptop B&W'>
+                            </div>
+                            <div id='link-space'>
+                                <p>${element.label}</p>
+                            </div>
+                        </a>`;
         ol.appendChild(li);
     });
 }
