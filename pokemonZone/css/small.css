@@ -90,8 +90,8 @@ header img {
 
 .display-menu {
     position: fixed;
-    top: 480px;
-    left: 280px;
+    top: 82%;
+    left: 75%;
 }
 
 .display-menu #menu {
