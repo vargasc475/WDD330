@@ -90,8 +90,8 @@ header img {
 
 .display-menu {
     position: fixed;
-    top: 420px;
-    left: 230px;
+    top: 480px;
+    left: 280px;
 }
 
 .display-menu #menu {
@@ -136,6 +136,7 @@ header img {
     grid-template-columns: 1fr 1fr;
     margin: 10px;
     border-radius: 10px;
+    justify-self: center;
 }
 
 /* SET CARD BACKGROUND COLOR ACCORDING ITS TYPE */
