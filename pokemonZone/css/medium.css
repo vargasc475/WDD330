@@ -1,0 +1,89 @@
+@media(min-width: 45em) {
+    body {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* STYLING HEADER AND HOME DESCRIPTION*/
+
+    header, #home-description, footer {
+        grid-column: 1/5;
+    }
+
+    /* STYLING MENU BUTTON */
+    .display-menu {
+        left: 650px;
+        top: 600px;
+    }
+
+    
+
+    #cards-section, #favorite-pokemons {
+        grid-column: 1/5;
+        display: grid;
+        grid-template-columns: 1fr .5fr;
+    }
+
+    #div-details {
+        grid-column: 2/3;
+        grid-row: 1/3;
+        justify-self: center;
+        align-self: center;
+        height: fit-content;
+    }
+
+    #poke-cards {
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #poke-cards section.normal {
+        width: 115px;
+        height: 215px;
+    }
+    
+    #poke-cards section.details, #favorite-pokemons section.details {
+        left: 495px;
+        bottom: 130px;
+        border: none;
+        padding: 0 50px;
+    }
+
+    section.details h3 {
+        text-align: center;
+    }
+
+    section.details img {
+        margin-left: 25px;
+    }
+
+    #body .display-details-space, #fav-page .display-details-space {
+        display: block;
+        height: fit-content;
+        border-radius: 10px;
+    }
+
+    #body .display-details-space img, #fav-page .display-details-space img {
+        width: 100px;
+        height: 100px;
+        margin-left: 70px;
+    }
+
+    #body .display-details-space p, #fav-page .display-details-space p {
+        text-align: center;
+    }
+
+    button#next {
+        margin-right: -100px;
+    }
+
+    /* STYLING FAVORITE SUB PAGE */
+    #fav-page #favorite-description {
+        grid-column: 1/5;
+    }
+
+    #favorite-pokemons #cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+ 
+} 

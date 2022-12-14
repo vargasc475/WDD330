@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Viga&display=swap');
+
+html {
+    height: fit-content;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "Viga";
+}
+
+p, a, li, button {
+    font-family: "Quicksand";
+}
+
+/* STYlING HEADER */
+
+header {
+    grid-column: 1/3;
+    background-color: #4FB477;
+    width: 100%;
+    display: grid;
+    padding-bottom: 10px;
+}
+
+header img {
+    width: 200px;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+/* STYLING MENU */
+
+.hide-links, .hide-menu {
+    display: none;
+}
+
+.display-links, .display-menu {
+    display: block;
+}
+
+.display-links {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.418);
+    display: grid;
+    grid-template-rows: 1fr 1fr .3fr;
+}
+
+.display-links a {
+    background-color: #F7F7FF;
+    color: black;
+    text-decoration: none;
+    height: fit-content;
+    margin: 20px;
+    padding: 5px 50px;
+    border-radius: 10px;
+}
+
+.display-links a:hover {
+    background-color: #3993DD;
+    color: #F7F7FF;
+}
+
+.display-links a:nth-child(1) {
+    justify-self: center;
+    align-self: end;
+}
+
+.display-links a:nth-child(2) {
+    justify-self: center;
+    align-self: start;
+}
+
+.display-links #back {
+    width: fit-content;
+    height: fit-content;
+    width: 65px;
+    border: none;
+    margin: 0 20px 20px 0;
+    justify-self: end;
+}
+
+.display-menu {
+    position: fixed;
+    top: 420px;
+    left: 230px;
+}
+
+.display-menu #menu {
+    width: 65px;
+    border: none;
+}
+
+/* STYLING HOME DESCRIPTION */
+#home-description {
+    padding: 10px;
+    background-color: #3993DD;
+    grid-column: 1/3;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#home-description h1 {
+    color: #F28123;
+    -webkit-text-stroke: .2px rgb(7, 1, 94);
+}
+
+#home-description p {
+    padding-bottom: 10px;
+}
+
+#cards-section {
+    grid-column: 1/3;
+}
+
+#poke-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-column: 1/3; */
+    padding: 10px;
+}
+
+#poke-cards section.normal, #favorite-pokemons section.normal {
+    width: 100px;
+    height: fit-content;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* SET CARD BACKGROUND COLOR ACCORDING ITS TYPE */
+#poke-cards #normal, #favorite-pokemons #normal {
+    background-color: rgba(187, 233, 241, 0.850);
+}
+#poke-cards #fire, #favorite-pokemons #fire  {
+    background-color: rgba(255, 119, 40, 0.850);
+}
+#poke-cards #water, #favorite-pokemons #water {
+    background-color: rgba(81, 253, 187, 0.850);
+}
+#poke-cards #grass, #favorite-pokemons #grass {
+    background-color: rgba(161, 255, 73, 0.850);
+}
+#poke-cards #electric, #favorite-pokemons #electric {
+    background-color: rgba(255, 252, 73, 0.850);
+}
+#poke-cards #ice, #favorite-pokemons #ice {
+    background-color: rgba(116, 255, 248, 0.850);
+}
+#poke-cards #fighting, #favorite-pokemons #fighting {
+    background-color: rgba(255, 73, 73, 0.850);
+}
+#poke-cards #poison, #favorite-pokemons #poison  {
+    background-color: rgba(190, 93, 255, 0.850);
+}
+#poke-cards #ground, #favorite-pokemons #ground {
+    background-color: rgba(170, 100, 35, 0.850);
+}
+#poke-cards #flying, #favorite-pokemons #flying {
+    background-color: rgba(87, 255, 185, 0.850);
+}
+#poke-cards #psychic, #favorite-pokemons #psychic {
+    background-color: rgba(255, 109, 199, 0.850);
+}
+#poke-cards #bug, #favorite-pokemons #bug {
+    background-color: rgba(86, 151, 24, 0.850);
+}
+#poke-cards #rock, #favorite-pokemons #rock {
+    background-color: rgba(128, 156, 167, 0.850);
+}
+#poke-cards #ghost, #favorite-pokemons #ghost {
+    background-color: rgba(31, 54, 117, 0.850);
+}
+#poke-cards #dark, #favorite-pokemons #dark {
+    background-color: rgba(69, 0, 116, 0.850);
+}
+#poke-cards #dragon, #favorite-pokemons #dragon {
+    background-color: rgba(146, 0, 0, 0.850);
+}
+#poke-cards #steel, #favorite-pokemons #steel {
+    background-color: rgba(85, 102, 70, 0.850);
+}
+#poke-cards #fairy, #favorite-pokemons #fairy {
+    background-color: rgba(255, 73, 143, 0.850);
+}
+
+#poke-cards section img, #favorite-pokemons section img {
+    grid-column: 1/3;
+}
+
+#poke-cards section h3, #favorite-pokemons section h3 {
+    grid-column: 1/3;
+    grid-row: 2;
+    justify-self: center;
+    margin: 0;
+}
+
+#poke-cards section p, #favorite-pokemons section p {
+    height: fit-content;
+}
+
+#poke-cards section #experience, #favorite-pokemons section #experience {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+    margin: 0;
+}
+
+#poke-cards section #number, #favorite-pokemons section #number {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: center;
+    margin: 0;
+}
+
+#poke-cards section #type, #favorite-pokemons section #type {
+    margin: 0;
+    justify-self: center;
+    align-self: end;
+}
+
+#poke-cards section .off, #poke-cards section .on, #favorite-pokemons section .off, #favorite-pokemons section .on {
+    width: 30px;
+    grid-column: 2;
+    grid-row: 4/6;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+#poke-cards section .inactive-details, #poke-cards section .inactive-back, #favorite-pokemons section .inactive-details, #favorite-pokemons section .inactive-back {
+    display: none;
+}
+
+#poke-cards section .active-details, #poke-cards section .active-back, #favorite-pokemons section .active-details, #favorite-pokemons section .active-back {
+    display: block;
+}
+
+#poke-cards section .active-details, #favorite-pokemons section .active-details {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    text-decoration: underline;
+    color: black;
+    justify-self: center;
+    align-self: end;
+    grid-row: 5;
+}
+
+#poke-cards section .active-details:hover, #favorite-pokemons section .active-details:hover {
+    color: #F7F7FF;
+}
+
+#poke-cards section .active-back, #favorite-pokemons section .active-back {
+    border-radius: 50px;
+    width: fit-content;
+    align-self: end;
+    justify-self: center;
+    background-color: white;
+    color: red;
+    border: 1px solid;
+    margin: 5px;
+}
+
+/* STYLE THE CARD WITH THE DETAILS */
+#poke-cards section.details, #favorite-pokemons section.details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: fixed;
+    border-radius: 10px;
+    bottom: 0;
+    left: 0;
+    border-top: 160px;
+    border-bottom: 25px;
+    border-left: 115px;
+    border-right: 110px;
+    border-color: rgba(247, 244, 244, 0);
+    border-style: solid;
+    width: 160px;
+}
+
+#poke-cards section .display-height {
+    grid-row: 5;
+}
+
+#poke-cards section .display-weight {
+    grid-row: 6;
+}
+
+#poke-cards section.details img, #poke-cards section.details h3, #poke-cards section.details p, #favorite-pokemons section.details img, #favorite-pokemons section.details h3, #favorite-pokemons section.details p {
+    grid-column: 1/3;
+    text-align: start;
+    justify-self: start;
+}
+
+#poke-cards section.details #type, #favorite-pokemons section.details #type {
+    justify-self: start;
+    grid-row: 12;
+}
+
+#poke-cards section.details .off, #poke-cards section.details .on, #favorite-pokemons section.details .off, #favorite-pokemons section.details .on {
+    grid-column: 2;
+    grid-row: 14;
+    margin: 0 2px 10px 0;
+}
+
+/* HIDE THE FULL DETAILS */
+#poke-cards .hide-height, #poke-cards .hide-weight, #poke-cards .hide-second-type, #poke-cards .hide-stats, #favorite-pokemons .hide-height, #favorite-pokemons .hide-weight, #favorite-pokemons .hide-second-type, #favorite-pokemons .hide-stats {
+    display: none;
+}
+
+#poke-cards section.details p, #poke-cards section.details h3, #favorite-pokemons section.details p, #favorite-pokemons section.details h3 {
+    width: 145px;
+    margin: 0 0 0 0;
+}
+
+button#prev {
+    grid-column: 1;
+    width: fit-content;
+    align-self: start;
+    margin-left: 10px;
+    background-color: #4FB477;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #F7F7FF;
+}
+
+button#next {
+    grid-column: 2;
+    width: fit-content;
+    justify-self: end;
+    align-self: start;
+    background-color: #4FB477;
+    margin-right: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #F7F7FF;
+}
+
+#body .hide-details-space, #body .display-details-space, #fav-page .hide-details-space, #fav-page .display-details-space {
+    display: none;
+}
+
+footer {
+    grid-row: 5;
+    grid-column: 1/3;
+    display: grid;
+    text-align: center;
+    background-color: rgb(11, 13, 122);
+    margin-top: 20px;
+}
+
+footer img {
+    width: 100px;
+    justify-self: center;
+    margin: 50px 0 20px 0;
+}
+
+footer a {
+    color: #F7F7FF;
+    margin: 5px 12px;
+}
+
+footer a:hover {
+    color: #F28123;
+}
+
+footer #copy {
+    background-color: black;
+    color: #F7F7FF;
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer #copy p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* STYLING FAVORITE SUB PAGE */
+#fav-page #favorite-description {
+    grid-column: 1/3;
+    grid-row: 2;
+    background-color: #F28123;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#favorite-description h1 {
+    color: #F7F7FF;
+}
+
+#favorite-pokemons {
+    grid-column: 1/3;
+}
+
+#favorite-pokemons #cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+

@@ -1,0 +1,138 @@
+@media(min-width: 64em) {
+
+    /* STYLING MENU */
+
+    header {
+        display: grid;
+        grid-template-columns: .3fr 1fr;
+        position: fixed;
+    }
+
+    header img {
+        width: 150px;
+        justify-self: start;
+        margin-left: 40px;
+    }
+
+    #light {
+        background-color: #3993DD;
+        color: #e26703;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    #links-div {
+        align-self: center;
+        font-size: 20px;
+    }
+
+    #links-div a {
+        color: #F7F7FF;
+        text-decoration: none;
+    }
+    
+    #links-div a:hover {
+        color: #F28123;
+        text-decoration: none;
+    }
+
+    #links-div a:nth-child(2) {
+        margin-left: 30px;
+    }
+
+    #home-description {
+        margin-top: 90px;
+    }
+
+    #home-description h1 {
+        color: #F7F7FF;
+        -webkit-text-stroke: 0;
+    }
+
+    .display-menu {
+        display: none;
+    }
+
+    .hide-links {
+        display: block;
+    }
+
+    #back {
+        display: none;
+    }
+
+
+    #poke-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #div-details {
+        width: 300px;
+        right: 170px;
+        bottom: 40px;
+    }
+
+    #favorite-pokemons #cards {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #div-details img {
+        margin: 150px 0 0 100px;
+    }
+
+    #poke-cards section.details, #favorite-pokemons section.details {
+        left: 950px;    
+        bottom: 40px;
+        width: 203px;
+        height: 428px;
+    }
+
+    #poke-cards section.details h3, #poke-cards section.details img {
+        margin-left: 50px;
+    }
+
+    #poke-cards section.details button {
+        justify-self: start;
+    }
+
+    #poke-cards section.details .off, #poke-cards section.details .on {
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+
+    button#next {
+        margin-right: -145px;
+    }
+
+    footer {
+        grid-template-columns: .5fr 1fr;
+        grid-template-rows: 1fr 1fr .2fr;
+    }
+
+    footer img {
+        grid-column: 1;
+        grid-row: 1/3;
+    }
+
+
+    footer a:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: end;
+    }
+
+    footer #copy {
+        grid-column: 1/3;
+        grid-row: 3;
+    }
+
+    /* STYLING FAVORITE SUB PAGE */
+    #fav-page #favorite-description {
+        grid-row: 2;
+        margin-top: 90px;
+    }
+
+    #favorite-pokemons {
+        grid-row: 3;
+    }
+}
