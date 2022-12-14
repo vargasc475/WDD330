@@ -81,8 +81,8 @@
     }
 
     #poke-cards section.details, #favorite-pokemons section.details {
-        left: 950px;    
-        bottom: 40px;
+        left: 70%;    
+        bottom: 10%;
         width: 203px;
         height: 428px;
     }
