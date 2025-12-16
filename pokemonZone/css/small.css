@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Viga&display=swap');
 
 html {
-    height: fit-content;
+    height: 100%;
 }
 
 body {
     height: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0;
+    margin: 0; 
 }
 
 h1, h2, h3 {
@@ -96,7 +97,7 @@ header img {
 
 .display-menu #menu {
     width: 65px;
-    border: none;
+    right: 5vw;
 }
 
 /* STYLING HOME DESCRIPTION */
@@ -239,6 +240,11 @@ header img {
     
 }
 
+#poke-cards section .off:hover, #poke-cards section .on:hover, #favorite-pokemons section .off:hover, #favorite-pokemons section .on:hover {
+    cursor: pointer;
+    
+}
+
 #poke-cards section .inactive-details, #poke-cards section .inactive-back, #favorite-pokemons section .inactive-details, #favorite-pokemons section .inactive-back {
     display: none;
 }
@@ -258,6 +264,10 @@ header img {
 }
 
 #poke-cards section .active-details:hover, #favorite-pokemons section .active-details:hover {
+    cursor: pointer;
+}
+
+#poke-cards section .active-details:hover, #favorite-pokemons section .active-details:hover {
     color: #F7F7FF;
 }
 
@@ -272,21 +282,19 @@ header img {
     margin: 5px;
 }
 
+#poke-cards section .active-back:hover, #favorite-pokemons section .active-back:hover {
+    cursor: pointer;
+}
+
 /* STYLE THE CARD WITH THE DETAILS */
 #poke-cards section.details, #favorite-pokemons section.details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     position: fixed;
     border-radius: 10px;
-    bottom: 0;
-    left: 0;
-    border-top: 160px;
-    border-bottom: 70px;
-    border-left: 100px;
-    border-right: 110px;
-    border-color: rgba(247, 244, 244, 0);
-    border-style: solid;
-    width: 160px;
+    bottom: 18%;
+    padding: 10% 10% 10% 30%;
+    height: 400px;
 }
 
 #poke-cards section .display-height {
@@ -327,13 +335,12 @@ header img {
 button#prev {
     grid-column: 1;
     width: fit-content;
-    align-self: start;
-    margin-left: 10px;
     background-color: #4FB477;
     border: none;
     border-radius: 10px;
-    padding: 5px 10px;
+    padding: 7px 12px;
     color: #F7F7FF;
+    margin-left: 20px;
 }
 
 button#next {
@@ -412,4 +419,15 @@ footer #copy p {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.blurred {
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0;
+    }
+
 

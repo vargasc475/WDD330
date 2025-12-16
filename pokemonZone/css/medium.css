@@ -1,26 +1,34 @@
-@media(min-width: 45em) {
+@media(min-width: 33em) {
+    html {
+        height: 100%;
+        width: 100%;
+    }
     body {
-        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        grid-template-columns: repeat(7, 1fr);
     }
 
     /* STYLING HEADER AND HOME DESCRIPTION*/
 
     header, #home-description, footer {
-        grid-column: 1/5;
+        grid-column: 1/8;
     }
+
+  
 
     /* STYLING MENU BUTTON */
     .display-menu {
-        left: 650px;
-        top: 600px;
+        top: 680px;
+        left: 88vw;
     }
 
     
 
     #cards-section, #favorite-pokemons {
-        grid-column: 1/5;
+        grid-column: 2/7;
         display: grid;
-        grid-template-columns: 1fr .5fr;
+        grid-template-columns: 1fr;
+        justify-self: center;
     }
 
     #div-details {
@@ -34,7 +42,7 @@
     #poke-cards {
         grid-column: 1/2;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     #poke-cards section.normal {
         width: 115px;
@@ -42,10 +50,11 @@
     }
     
     #poke-cards section.details, #favorite-pokemons section.details {
-        left: 495px;
-        bottom: 130px;
+        left: 30vw;
+        bottom: 40vw;
         border: none;
-        padding: 0 50px;
+        width: 200px;
+        padding: 0 50px 10px 50px;
     }
 
     section.details h3 {
@@ -78,7 +87,7 @@
 
     /* STYLING FAVORITE SUB PAGE */
     #fav-page #favorite-description {
-        grid-column: 1/5;
+        grid-column: 1/8;
     }
 
     #favorite-pokemons #cards {

@@ -22,11 +22,11 @@ export default class PokeView {
         
 
         /* Create the elements to display the information*/
+        const blurred = document.createElement('div');
         const card = document.createElement('section');
         this.setAttributeType(type, card);
         card.classList.add('normal');
 
-    
         const details = document.createElement('button');
         const back = document.createElement('button');
        
@@ -56,7 +56,7 @@ export default class PokeView {
         
 
         // MODULE TO CREATE MORE AND BACK BUTTONS
-        this.createMoreAndBackButtons(details, back, card, this.createHeight(pokeHeight, card), this.createWeight(pokeWeight, card), this.createTypes(pokeTypes, card))
+        this.createMoreAndBackButtons(details, back, card, this.createHeight(pokeHeight, card), this.createWeight(pokeWeight, card), this.createTypes(pokeTypes, card), blurred)
         
 
         card.appendChild(details);
@@ -114,8 +114,9 @@ export default class PokeView {
         })
 
         
+        blurred.appendChild(card);
 
-        pokeCards.appendChild(card);
+        pokeCards.appendChild(blurred);
 
     }
 
@@ -274,14 +275,18 @@ export default class PokeView {
     }
 
     // MODULE TO ACTIVATE MORE AND BACK BUTTONS
-    createMoreAndBackButtons(details, back, card, height, weight, types) {
+    createMoreAndBackButtons(details, back, card, height, weight, types, blurred) {
         /* change the class button to see the details of each pokemon */ 
+       
         details.setAttribute('class', 'active-details');
         details.innerHTML = 'more';
+        blurred.setAttribute('class', 'unblurred');
+        
         details.addEventListener('click', () => {
             card.className = 'details';
             details.className = 'inactive-details';
             back.className = 'active-back';
+            blurred.className = 'blurred';
 
             height.className = 'display-height';
             weight.className = 'display-weight';
@@ -296,6 +301,7 @@ export default class PokeView {
             card.classList = 'normal';
             details.className = 'active-details';
             back.className = 'inactive-back';
+            blurred.className = 'unblurred';
             
             height.className = 'hide-height';
             weight.className = 'hide-weight';
@@ -330,6 +336,7 @@ export default class PokeView {
     
                 const details = document.createElement('button');
                 const back = document.createElement('button');
+                const blurred = document.createElement('div');
     
                 card.appendChild(this.createImg(pokeImg, pokeName));
                 card.appendChild(this.createPName(pokeName));
@@ -341,13 +348,15 @@ export default class PokeView {
                 
                 card.appendChild(this.createPType(type));
         
-                this.createMoreAndBackButtons(details, back, card, this.createHeight(pokeHeight, card), this.createWeight(pokeWeight, card), this.createTypes(pokeTypes, card))
+                this.createMoreAndBackButtons(details, back, card, this.createHeight(pokeHeight, card), this.createWeight(pokeWeight, card), this.createTypes(pokeTypes, card), blurred)
     
                 card.appendChild(details);
                 card.appendChild(back);
                 card.appendChild(this.getFavoriteBtn(card, id));
-                cards.appendChild(card)
+                blurred.appendChild(card);
+                cards.appendChild(blurred);
     
+                
                 div.appendChild(cards);
             }
         }

@@ -4,7 +4,7 @@ import LocalStorage from "./localStorage.js";
 
 export default class PokeController {
     constructor() {
-        this.baseUrl = 'https://pokeapi.co/api/v2/pokemon/'
+        this.baseUrl = 'https://pokeapi.co/api/v2/pokemon?limit=30&offset=0'
         this.pokeModel = new PokeModel();
         this.pokeView = new PokeView();
         this.localStorage = new LocalStorage();
@@ -12,7 +12,7 @@ export default class PokeController {
     }
 
     // In this method is used the model and view classes to set and display pokemon data
-    async testAPI(baseUrl = 'https://pokeapi.co/api/v2/pokemon/') {
+    async testAPI(baseUrl = 'https://pokeapi.co/api/v2/pokemon?limit=30&offset=0') {
         const pokeLocal = localStorage.getItem('favList');
         if (pokeLocal) {this.favoriteList = JSON.parse(pokeLocal);}
         
@@ -61,7 +61,7 @@ export default class PokeController {
                     this.pokeModel.getPokeAapi(data.results[i].url)
                     .then((data) => {this.pokeView.getPokeSimpleCard(data, this.favoriteList)});
                 }
-                console.log(this.favoriteList)
+                console.log(this.favoriteList);
                 window.scrollTo(0,0);  
                 
                 /* Enable the buttons to see the next and prev page*/
@@ -83,7 +83,7 @@ export default class PokeController {
                     prevBtn.style.display = 'none';
                 }
             });
-
+            console.log(pokemon);
             
         } else {
             this.pokeView.displayFavoriteCards(localStorage.getItem('favList'))
